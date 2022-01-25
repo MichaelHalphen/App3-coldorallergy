@@ -88,7 +88,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--This denotes a new page-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
@@ -110,16 +110,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!--This denotes a new page-->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		
-		<div id="content" class="w3-container">
-        <p>?</p> 
 		
 	<title>W3.CSS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,13 +125,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div class="w3-container">
 	  <h2>
-	  <a href="#two" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a>
-	  <a href="#two" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> 
+	  <a href="#three" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a>
+	  <a href="#three" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> 
 	  </h2>
 	</div>
 </div>	
+		
+<div class="page" id="three"> <!--This denotes a new page-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p> 
+		
+	<title>W3.CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<body>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+	<div class="w3-container">
+	  <h2>
+	  <a href="#two" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a> <!--these are the buttons that direct you to page 2 and record your responses-->
+	  <a href="#two" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> 
+	  </h2>
+	</div>
+		</div>
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--This makes the pop up "DIY" at the bottom-->
 	<p>DIY!</p>
 </footer>
 
