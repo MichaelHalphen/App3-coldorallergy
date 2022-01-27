@@ -41,20 +41,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 
 
-        function allergyAdd(){
+        function allergyAdd(){ <!--This keeps a tally of answers so that they may be displayed later on-->
             allergy_count = allergy_count + 1; <!--I removed the alert so that I can desplay results on last page-->
 
         }
 
-        function coldAdd(){
+        function coldAdd(){ 
             cold_count = cold_count + 1;
         }
         
-        function Results(){
+        function Results(){ <!--This function does the math of calculating percentages and allows me to display a whole number percentage on the last page-->
         
         var allergy_percent = (allergy_count/4)*100;
         var cold_percent = (cold_count/4)*100;
-        var resultText = document.getElementById("Results()");
+        var resultText = document.getElementById("Results()"); <!--This allows me to retreive results-->
       
       	resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "<br> Probability it is a cold =" + cold_percent; 
         }
@@ -105,7 +105,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="one"> <!--This denotes a new page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1/4</h1>
+		<h1>Question 1/4</h1> <!--This is the header-->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -118,7 +118,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div class="w3-container">
 	  <h2>
-	  <a href="#two" onclick="allergyAdd();"class="w3-btn w3-black"> Yes </a> <!--these are the buttons that direct you to page 2 and record your responses-->
+	  <a href="#two" onclick="allergyAdd();"class="w3-btn w3-black"> Yes </a> <!--these are the buttons that direct you to the next page and record your responses-->
 	  <a href="#two" onclick="coldAdd()" class="w3-btn w3-black"> No </a> 
 	  </h2>
 	</div>
@@ -161,7 +161,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div class="w3-container">
 	  <h2>
-	  <a href="#four" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a>
+	  <a href="#four" onclick="coldAdd();"class="w3-btn w3-black"> Yes </a> 
 	  <a href="#four" onclick="allergyAdd()" class="w3-btn w3-black"> No </a> 
 	  </h2>
 	</div>
@@ -200,12 +200,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div class="w3-container">
 	  <h2>
-	  <a href="#six" onclick="Results();"class="w3-btn w3-black"> See Results </a>
+	  <a href="#six" onclick="Results();"class="w3-btn w3-black"> See Results </a> <!--This is an edited version of my button that calls back to "Results()" when pressed. -->
 	</div>
 		</div>
 </div>
-<div class="page" id="six">
-	<p id="Results()"></p>
+<div class="page" id="six"> 
+	<p id="Results()"></p> <!--This gives me a place to put the results-->
 
 
 <!--This used to make a pop up saying "DIY" at the bottom but I removed it for simplicity-->
