@@ -1,3 +1,5 @@
+
+   
 <!DOCTYPE html> 
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
@@ -7,7 +9,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Michael Halphen
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +19,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+To give a estimate probability of if you are experiencing a cold or an allergic reaction
  
 Known Issues:
-blah, blah, blah, blah
+Based on very few diagnostic questions and is not equivilant to medical diagnosis
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -47,8 +49,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+        
+        function Results(){
+        
+        var allergy_percent = (allergy_count/4)*100;
+        var cold_percent = (cold_count/4)*100;
+        var resultText = document.getElementById("Results()");
+      
+      	resultText.innerHTML = "Probability it is allergies =" + allergy_percent + "<br> Probability it is a cold =" + cold_percent; 
+        }
+     
+
+
 
   </script>
+
 
 
 
@@ -177,12 +192,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="five"> <!--This denotes a new page-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1> <!--This will be the reults page so I changed the header to reflect that-->
 	</div>
-	
+	<title>W3.CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<body>
+
+	<div class="w3-container">
+	  <h2>
+	  <a href="#six" onclick="Results();"class="w3-btn w3-black"> See Results </a>
 	</div>
 		</div>
 </div>
+<div class="page" id="six">
+	<p id="Results()"></p>
 
 
 <!--This used to make a pop up saying "DIY" at the bottom but I removed it for simplicity-->
